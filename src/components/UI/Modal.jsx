@@ -18,7 +18,10 @@ const portalElement = document.getElementById('overlays');
 const Modal = (props) => {
 	return (
 		<>
-			{createPortal(<Backdrop onHideCart={props.onHideCart}/>, portalElement)}
+			{createPortal(
+				<Backdrop onHideCart={props.onHideCart} />,
+				portalElement
+			)}
 			{createPortal(
 				<ModalOverlay>{props.children}</ModalOverlay>,
 				portalElement
